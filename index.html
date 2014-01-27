@@ -12,8 +12,8 @@
 <div class="container header" ng-controller="MenuController">
 	<div class="row">
 		<div class="col-sm-12">
-			<a class="btn btn-primary" data-ng-repeat="name in menuItems">{{name}}</a>
-		</div>
+			<a class="btn btn-primary" data-ng-repeat="item in menuItems" href="#{{item.link}}">{{item.name}}</a>
+		</div> 
 	</div>				
 </div>
 	

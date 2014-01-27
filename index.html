@@ -1,35 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html data-ng-app="app">
 <head>
   <title>Deepak Bhattarai</title>
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
 </head>
   <body>
     <div class="container">
       <div class="row">
-          <div class="jumbotron">
-             <h1>Hello!!!</h1>
-               <p>This is Deepak Bhattarai</p>
-          </div>
-          <div class="col-md-3">
-              <address>
-                <strong>Address</strong><br />
-                Sinamangal, Kathmandu<br />
-                <a href="mailto:#">deepak@hrevert.com</a>
-                <a href="mailto:#">bring2dip@gmail.com</a>
-                <a href="mailto:#">bring2dip@yahoo.com</a>
-                <a href="mailto:#">bring2dip@hotmail.com</a>
-                <a href="mailto:#">deepak.bhattarai@apexcollege.edu.np</a>
-                
-                <br />
-                <abbr title="Phone">P:</abbr> (977) 9841410788
-              </address>
-          </div>
+          <!--Header-->
+			<div class="container header" ng-controller="MenuController">
+				<div class="row">
+					<div class="col-sm-12">
+						<a class="btn btn-primary" data-ng-repeat="name in menuItems">{{name}}</a>
+					</div>
+				</div>				
+			</div>
+			
+			<!--main container -->
+		   <div class="container" data-ng-view="">
+		   </div> 
+
+			<!--footer -->
+			<div class="container footer">
+				<div class="row">
+					<div class="col-sm-10">
+						
+					</div>
+					<div class="col-sm-2">
+						copyright
+					</div>
+				</div>				
+			</div>
       </div>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
   </body>
 </html>

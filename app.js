@@ -13,6 +13,11 @@ app.config(function($routeProvider,$locationProvider){
 		controller:'SocialController'
 		}
 	)
+	.when('/contact', {
+		templateUrl:'contact.html',
+		controller:'ContactController'
+		}
+	)
 	.when('/', {
 		templateUrl:'home.html',
 		controller:'IndexController'
@@ -32,12 +37,30 @@ app.controller('SocialController',function($scope,$location,$params){
 	$scope.message="Hello this is social";
 });
 
+app.controller('ContactController',function($scope,$location,$params){
+	
+});
+
 app.controller('IndexController',function($scope,$location,$params){
 	$scope.message="Hello this is home page";
 });
 app.controller('MenuController',function($scope){
-	
 	$scope.menuItems=[
-		'Home','Gallery','Social'
+		{
+			name:'Home',
+			link:'/'
+		},
+		{
+			name:'Gallery',
+			link:'/gallery'
+		},
+		{
+			name:'Social',
+			link:'/social'
+		},
+		{
+			name:'Contact',
+			link:'/contact'
+		},
 	];
 });

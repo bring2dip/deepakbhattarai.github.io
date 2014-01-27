@@ -61,6 +61,6 @@ app.controller('MenuController',function($scope){
 		{
 			name:'Contact',
 			link:'/contact'
-		},
+		}
 	];
 });
